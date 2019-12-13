@@ -1,0 +1,17 @@
+drop database if exists policy;
+create database policy character set utf8;
+use policy;
+
+create table news(
+  nid int primary key auto_increment,
+  title varchar(30),
+  time varchar(30),
+  detail varchar(500)
+);
+
+create table notice(
+  nid int primary key auto_increment,
+  title varchar(30),
+  time varchar(30),
+  detail varchar(500)
+);

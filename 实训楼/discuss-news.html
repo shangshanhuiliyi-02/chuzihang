@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="js/jQuery.js"></script>
+    <title></title>
+</head>
+<body>
+    <div id="main">
+
+    </div>
+</body>
+<script>
+    var id;
+    function UrlSearch() {
+        var name, value;
+        var str = location.href; //获取到整个地址
+        var num = str.indexOf("?")
+        str = str.substr(num + 1); //取得num+1后所有参数，这里的num+1是下标 str.substr(start [, length ]
+        var arr = str.split("&"); //以&分割各个参数放到数组里
+        for (var i = 0; i < arr.length; i++) {
+            num = arr[i].indexOf("=");
+            if (num > 0) {
+                name = arr[i].substring(0, num);
+                value = arr[i].substr(num + 1);
+                this[name] = value;
+                id=value
+            }
+        }
+    }
+    UrlSearch();
+
+    $.ajax({
+        url:'static/discuss.json',
+        type:'get',
+        dataType:'json',
+        success:function(data){
+            $('#main').append(data.post[id].title)
+            console.log(id)
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jQuery.js"></script>
+    <style></style>
+</head>
+<body>
+    <div id="main">
+
+    </div>
+</body>
+<script>
+    $.ajax({
+        url:'static/detail.json',
+        dataType:'json',
+        success:function(data){
+            for(i=0;i<data.exercise.length;i++){
+                var name=data.exercise[i].name
+                var id=data.exercise[i].id
+                $('#main').append(`<h1>`+name+`</h1>`)
+            }
+
+            /*for(i=0;i<data.exercise.length;i++){
+                var id=data.exercise[i].id
+                $('#main').append(`<h1>`+id+`</h1>`)
+            }*/
+        }
+    })
+    function UrlSearch() {
+        var id, value;
+        var str = location.href; //获取到整个地址
+        var num = str.indexOf("?")
+        str = str.substr(num + 1); //取得num+1后所有参数，这里的num+1是下标 str.substr(start [, length ]
+        var arr = str.split("&"); //以&分割各个参数放到数组里
+        for (var i = 0; i < arr.length; i++) {
+            num = arr[i].indexOf("=");
+            if (num > 0) {
+                id = arr[i].substring(0, num);
+                value = arr[i].substr(num + 1);
+                this[id] = value;
+                console.log(this[id])  //页面获取到的id值
+            }
+        }
+    }
+    UrlSearch()
+</script>
+</html>

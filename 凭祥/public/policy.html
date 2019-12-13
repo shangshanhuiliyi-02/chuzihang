@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>政策公告</title>
+		<link rel="stylesheet" href="css/policy.css">
+		<script src="js/vue.js"></script>
+		<script src="js/Jquery.js"></script>
+		<link rel="stylesheet" href="iconfont/iconfont.css">
+		<link rel="stylesheet" href="css/element.css">
+		<script src="js/element.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<!--头部开始-->
+			<header>
+				<div class="nav-box">
+					<div class="nav-left">凭祥出口商品采购中心联网信息平台</div>
+					<div class="nav-right">
+						<div class="nav-right-item">
+							<div class="nav-right-item-box-active">首页</div>
+						</div>
+						<div class="nav-right-item">
+							<div class="nav-right-item-box">平台服务</div>
+						</div>
+						<div class="nav-right-item">
+							<div class="nav-right-item-box">外贸资讯</div>
+						</div>
+						<div class="nav-right-item">
+							<div class="nav-right-item-box nav-right-item-box-one">政策公告</div>
+						</div>
+						<div class="nav-right-item">
+							<div class="nav-right-item-box">关于我们</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!--头部结束-->
+			<img src="img/one.jpg" alt="" class="policy-img">
+
+			<div class="main-box">
+				<div class="main-left">
+					<!--模糊查询模块开始-->
+					<div class="search-box">
+						<div class="policy-nav" :class="[isActive ? 'policyNavActive' : '']" @click="policy">政策法规</div>
+						<div class="policy-nav" :class="[isActive ? '' : 'policyNavActive']" @click="notice">通知公告</div>
+						<div class="policy-nav-search">
+							<input type="text" placeholder="请输入关键词查找" v-model="searchVal">
+							<span class="iconfont icon-search icon-search-box" @click="search"></span>
+						</div>
+					</div>
+					<!--模糊查询模块结束-->
+					<!--列表开始1-->
+					<div class="list-box" v-show="see">
+						<div class="list-item" v-for="item in list">
+							<div class="title">{{item.title}}</div>
+							<div class="time">{{item.time}}</div>
+							<div style="clear: both"></div>
+							<div class="detail">{{item.detail}}
+								<!--大钻石矿商戴比尔斯已将原钻价格下调约5%，以应对日渐扩大的行业危机。由于消费需求转疲弱，加上人工
+                        钻石激增，全球钻石产业自8 月起就处于低迷边缘。 纽约宝石分析师Paul Zimnisky 表示：“目前市场疲软是因供应过剩。钻石
+                        买家手上的库存太多。” 由需求下降和供应过剩，过去几个月钻石批发商一直要求戴比尔斯下调钻石原矿现货价格。买家手上
+                        的库存太多。” 由需求下降和供应过剩，过去几个月钻石批发商一直要求戴比尔斯下调钻石原矿现货价格。由需求下降和供应过剩，
+                        过去几个月钻石批发商一直要求戴比尔斯下调钻石原矿现货价格。戴比尔斯下调钻石原矿现货价格。-->
+							</div>
+							<div class="readAll">阅读全文</div>
+						</div>
+					</div>
+					<!--列表结束1-->
+					<!--列表开始2-->
+					<!-- <div class="list-box" v-show="sees">
+                <div class="list-item" v-for="item in news">
+                    <div class="title">{{item.title}}</div>
+                    <div class="time">{{item.time}}</div>
+                    <div style="clear: both"></div>
+                    <div class="detail">{{item.detail}}&lt;!&ndash;大钻石矿商戴比尔斯已将原钻价格下调约5%，以应对日渐扩大的行业危机。由于消费需求转疲弱，加上人工
+                        钻石激增，全球钻石产业自8 月起就处于低迷边缘。 纽约宝石分析师Paul Zimnisky 表示：“目前市场疲软是因供应过剩。钻石
+                        买家手上的库存太多。” 由需求下降和供应过剩，过去几个月钻石批发商一直要求戴比尔斯下调钻石原矿现货价格。买家手上
+                        的库存太多。” 由需求下降和供应过剩，过去几个月钻石批发商一直要求戴比尔斯下调钻石原矿现货价格。由需求下降和供应过剩，
+                        过去几个月钻石批发商一直要求戴比尔斯下调钻石原矿现货价格。戴比尔斯下调钻石原矿现货价格。&ndash;&gt;</div>
+                    <div class="readAll">阅读全文</div>
+                </div>
+            </div>-->
+					<!--列表结束2-->
+				</div>
+				<!-- 热门新闻开始-->
+				<div class="main-right">
+					<div class="news-box">热门新闻</div>
+					<div class="news">
+						<div class="news-item" v-for="item in news">
+							<div class="news-circle"></div>
+							<div class="news-title">{{item.title}}</div>
+						</div>
+					</div>
+				</div>
+				<!-- 热门新闻结束-->
+				<div style="clear: both"></div>
+				<!--清除浮动-->
+
+				<div class="block page">
+					<!--<span class="demonstration">完整功能</span>-->
+					<el-pagination @current-change="handleCurrentChange" :current-page="currentPage" :page-sizes="[100, 200, 300, 400]" :page-size="5" layout="prev, pager, next, jumper" :total="total">
+					</el-pagination>
+				</div>
+			</div>
+
+			<footer>
+				<div class="foot">
+					<div class="one">
+						<div class="one-title">凭祥出口商品采购中心联网信息平台!</div>
+						<div class="one-address">地址：广西壮族自治区</div>
+					</div>
+					<div class="two">
+						<div class="two-title">关于我们</div>
+						<div class="two-small">公司简介</div>
+						<div class="two-small">新闻中心</div>
+						<div class="two-small">企业文化</div>
+						<div class="two-small">对外合作</div>
+					</div>
+					<div class="two">
+						<div class="two-title">使用帮助</div>
+						<div class="two-small">公司简介</div>
+						<div class="two-small">新闻中心</div>
+						<div class="two-small">企业文化</div>
+						<div class="two-small">对外合作</div>
+					</div>
+					<div class="two">
+						<div class="two-title">隐私声明</div>
+					</div>
+					<div class="two">
+						<div class="two-title">联系方式</div>
+						<div class="two-small">0771-222131</div>
+					</div>
+					<div class="two">
+						<div class="two-title">友情链接</div>
+						<div class="two-small">中国-东盟信息港股份有限公司</div>
+						<div class="two-small">东信-移动互联网公司</div>
+						<div class="two-small">中国东信云通信平台</div>
+						<div class="two-small">中国东信云通信平台</div>
+					</div>
+				</div>
+			</footer>
+
+		</div>
+
+	</body>
+	<script>
+		var e;
+		var vm = new Vue({ //实例化vue  development=>开发 product=>生产
+			el: '#app',
+			data: {
+				see: true,
+				sees: false,
+				Act: true,
+				list: [{
+						title: '大雪坪借剑',
+						time: '2020年6月31日',
+						detail: '天上剑仙三百万，遇我也须尽低眉'
+					},
+					{
+						title: '一剑开天门',
+						time: '2020年6月31日',
+						detail: '天不生我李淳罡，剑道万古长如夜'
+					},
+					{
+						title: '桃花剑神邓太阿',
+						time: '2020年6月31日',
+						detail: '试问天上仙人,谁敢来此人间'
+					},
+
+					{
+						title: '西蜀剑匠剑九黄',
+						time: '2020年6月31日',
+						detail: '盘坐城头死而不倒'
+					},
+					{
+						title: '收官无敌曹长卿',
+						time: '2020年6月31日',
+						detail: '一袭青衫独占天象八斗风流'
+					},
+				], //假数据
+				noticeList: [{
+						title: '大雪坪借剑',
+						time: '2020年6月31日',
+						detail: '天上剑仙三百万，遇我也须尽低眉'
+					},
+					{
+						title: '一剑开天门',
+						time: '2020年6月31日',
+						detail: '天不生我李淳罡，剑道万古长如夜'
+					},
+					{
+						title: '桃花剑神邓太阿',
+						time: '2020年6月31日',
+						detail: '试问天上仙人,谁敢来此人间'
+					},
+
+					{
+						title: '西蜀剑匠剑九黄',
+						time: '2020年6月31日',
+						detail: '盘坐城头死而不倒'
+					},
+					{
+						title: '收官无敌曹长卿',
+						time: '2020年6月31日',
+						detail: '一袭青衫独占天象八斗风流'
+					},
+					{
+						title: '吃剑老祖隨斜谷',
+						time: '2020年6月31日',
+						detail: '千里借剑徐凤年，一剑穿心韩貂寺'
+					},
+				], //假数据
+				news: [
+				"大雪坪借剑",
+				"一剑开天门", 
+				"桃花剑神邓太阿", 
+				"西蜀剑匠剑九黄", 
+				"收官无敌曹长卿"
+				], //如果news里面有{}的话=> item.title   如果没有{}=> item
+				/* title:'标题-我要去武汉',
+				 time:'2020年6月31日',
+				 detail:'111',
+				 list:[]*/
+				currentPage: 1, //当前页码数
+				total: 12, //分页总数（新闻总共有多少条）
+				searchVal: '', //模糊查询的输入框的值
+				isActive: true //控制政法法规、通知公告切换按钮的样式的变量
+			},
+			mounted() { //vue加载完成后，立即加载其中的函数或js语句
+				this.getList()
+			},
+			methods: {
+				handleCurrentChange(val) {
+					console.log(`当前页: ${val}`);
+					if(vm.isActive == true) {
+						$.ajax({ //政策法规的分页查询
+							type: 'post',
+							url: '/api/news/getPage',
+							data: {
+								page: val //val代表当前是第几页，page传到后台查询数据
+							},
+							success: function(result) {
+								console.log(result)
+								vm.list = result
+							}
+						})
+					}
+					if(vm.isActive == false) {
+						$.ajax({ //政策法规的分页查询
+							type: 'post',
+							url: '/api/notice/getPage',
+							data: {
+								page: val //val代表当前是第几页，page传到后台查询数据
+							},
+							success: function(result) {
+								console.log(result)
+								vm.list = result
+							}
+						})
+					}
+				},
+				getList() { //政策法规的一开始的查询（0~5条）（有bug 如果数据<5条的话，就没有数据）
+					$.ajax({
+						type: 'get',
+						url: '/api/news/getList',
+						success: function(result) {
+							vm.total = result.length
+							console.log(result)
+							let arr = []
+							for(i = 0; i < 5; i++) {
+								arr.push(result[i])
+							}
+							vm.list = arr
+							vm.news = arr //右边的热门新闻
+						}
+					})
+				},
+				search() { //模糊查询(有bug 如果查询的>5就没法分页)
+					if(vm.isActive == true) {
+						$.ajax({
+							type: 'get',
+							url: '/api/news/getList',
+							data: {
+								title: vm.searchVal
+							},
+							success: function(result) {
+								vm.total = result.length
+								vm.list = result
+								if(vm.searchVal == '') { //因为输入框里什么都没有，后台就会查询所有的数据，如果不判断的话，就会没法分页
+									vm.getList()
+									return
+								}
+							}
+						})
+					}
+					if(vm.isActive == false) {
+						$.ajax({
+							type: 'get',
+							url: '/api/notice/getList',
+							data: {
+								title: vm.searchVal
+							},
+							success: function(result) {
+
+								vm.total = result.length
+								vm.list = result
+								if(vm.searchVal == '') { //因为输入框里什么都没有，后台就会查询所有的数据，如果不判断的话，就会没法分页
+									vm.getNoticeList()
+									return
+								}
+							}
+						})
+					}
+				},
+				policy() {
+					vm.isActive = true
+					vm.getList()
+				},
+				notice() {
+					vm.isActive = false
+					vm.list = vm.noticeList //
+					vm.total = vm.noticeList.length
+					$.ajax({
+						type: 'get',
+						url: '/api/notice/getList',
+						success: function(result) {
+							vm.total = result.length
+							console.log(result)
+							let arr = []
+							for(i = 0; i < 5; i++) {
+								arr.push(result[i])
+							}
+							vm.list = arr
+						}
+					})
+				},
+				getNoticeList() {
+					$.ajax({
+						type: 'get',
+						url: '/api/notice/getList',
+						success: function(result) {
+							vm.total = result.length
+							console.log(result)
+							let arr = []
+							for(i = 0; i < 5; i++) {
+								arr.push(result[i])
+							}
+							vm.list = arr
+						}
+					})
+				}
+
+			},
+		})
+	</script>
+
+</html>

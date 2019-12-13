@@ -1,0 +1,132 @@
+
+.title-img{
+    width: 100%;
+    min-width: 1525px;
+    height: 300px;
+}
+.container{
+    width: 100%;
+    min-width: 1525px;
+    height: 760px;
+    /* border: 1px solid red;*/
+    margin: 0 auto;
+    /*padding-top: 40px;*/
+    background-color: #FAFAFA;
+}
+.left-top{
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    color: #999999;
+   /* border: 1px solid red;*/
+}
+.left{
+    width: 15%;
+    height: 215px;
+    border: 1px solid #DDDDDD;
+    float: left;
+}
+.left-one{
+    width: 100%;
+    height: 65px;
+    border-bottom: 1px solid #DDDDDD;
+    box-sizing: border-box;
+    line-height: 65px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+.left-two{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    padding-left: 20px;
+}
+.right{
+    width: 84%;
+    height: 710px;
+    /* border: 1px solid deeppink;*/
+    float: right;
+    box-sizing: border-box;
+}
+.right-one{
+    width: 100%;
+    height: 65px;
+    box-sizing: border-box;
+    line-height: 65px;
+    font-size: 18px;
+}
+.right-one-left{
+    float: left;
+    color: #008CDD;
+    padding-left: 80px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.right-two{
+    width: 100%;
+    height: 560px;
+    background-color: white;
+    border: 1px solid #E7E7E7;
+}
+.right-two-title{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 45px;
+}
+.right-two-small{
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+    color: #666666;
+}
+.right-two p{
+    font-size: 14px;
+    color: #666666;
+    padding-left: 50px;
+    padding-right: 50px;
+    line-height: 21px;
+}
+.p-active{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+}
+.right-two-line{
+    width: 94%;
+    height: 1px;
+    margin: 0 auto;
+    background-color: #DDDDDD;
+    margin-top: 40px;
+}
+.right-bottom{
+    width: 500px;
+    height: 20px;
+   /* border: 1px solid red;*/
+    margin-top: 17px;
+    float: right;
+    margin-right: 50px;
+}
+.right-bottom-left{
+    width: 50%;
+    height: 20px;
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    float: left;
+    font-size: 14px;
+    line-height: 20px;
+    color: #818181;
+}
+.right-bottom-right{
+    width: 50%;
+    height: 20px;
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    float: left;
+    font-size: 14px;
+    line-height: 20px;
+    color: #818181;
+    text-align: right;
+}

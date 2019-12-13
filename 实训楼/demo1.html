@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jQuery.js"></script>
+    <style></style>
+</head>
+<body>
+    <div id="main">
+
+    </div>
+<p id="a"></p>
+</body>
+<script>
+    $.ajax({
+        url:'static/demo1.json',
+        dataType:'json',
+        success:function(data){
+
+            //console.log(data.news.length)   //整个news数组的长度
+            //console.log(data.news[1].advertisement[0].tuofu)  取二维数组里面的数据
+
+            //最外层数组的下标里没有包含数组的数据
+           for(i=0;i<data.news.length-3;i++){
+               //console.log(data.news[i])
+               var title=data.news[i].title
+               var detail=data.news[i].detail
+               $('#main').append(`<div class="title">`+title+`</div>
+        <div class="detail">`+detail+`</div>`)
+               //循环插入数据
+           }
+
+            //最外层数组的下标里包含了数组的数据
+            for(i=(data.news.length-3);i<data.news.length;i++){
+               console.log(data.news[i])
+                var tuofu=data.news[i].advertisement[0].tuofu
+                $('#a').append(`<span>`+tuofu+`</span>`)
+            }
+
+        }
+    })
+</script>
+</html>

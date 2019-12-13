@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/jQuery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="css/index.css"/>     <!--项目自定义的css样式-->
+    <script src="js/index.js"></script>
+
+    <title></title>
+    <style>
+
+    </style>
+</head>
+<body>
+<!--遮布处理开始-->
+<div class="body-hide"></div>    <!--背景的那层灰布-->
+<div class="login-register-box">
+    <i class="iconfont icon---chahaohejiantou-" style="float: right;position: absolute;top:
+    10px;right: 20px;cursor: pointer" id="chaHao"></i>   <!--右上角的叉号-->
+    <div class="login-register-btn-box">
+        <div class="bottom-line"></div>
+        <div class="login-btn">登录</div>
+        <div class="register-btn">注册</div>
+    </div>
+    <div class="login-page">
+        <div class="input-box-01">
+            <div class="input-box-01-left">1</div>
+            <div class="input-box-01-right"><input type="text" placeholder="请输入邮箱" id="yx"/></div>
+        </div>
+        <div class="input-box-01 input-box-01-active">
+            <div class="input-box-01-left">2</div>
+            <div class="input-box-01-right"><input type="password" placeholder="请输入密码" id="mm"/></div>
+        </div>
+        <div class="box-three">
+            <input type="checkbox"/><div class="span01">下次自动登录</div><div class="span02">忘记密码？</div>
+        </div>
+        <div class="box-four">进入实验楼</div>
+        <p class="font">快速登录
+            <span class="iconfont icon-qq fontactive" style="margin-left: 3px"></span>
+            <span class="iconfont icon-weibo" style="margin-left: 12px"></span>
+            <span class="iconfont icon-wei_xin" style="margin-left: 12px"></span>
+            <span class="iconfont icon-GitHub" style="margin-left: 12px"></span>
+            <span class="iconfont icon-renren" style="margin-left: 12px"></span>
+        </p>
+    </div>
+    <div class="register-page">
+        <div class="input-box-01">
+            <div class="input-box-01-left">1</div>
+            <div class="input-box-01-right"><input type="text" placeholder="请输入邮箱" id="youxiang"/></div>
+        </div>
+        <div class="input-box-01 input-box-01-active">
+            <div class="input-box-01-left">2</div>
+            <div class="input-box-01-right"><input type="password" placeholder="请输入密码" id="mima"/></div>
+        </div>
+        <div class="box-three-active">
+            <div class="box-three-active-left"><input type="text"/></div>
+            <div class="box-three-active-right"></div>
+        </div>
+        <div class="box-four">注册</div>
+        <p class="box-five">注册表示您已经同意我们的<span style="color: #337AB7">隐私条款</span></p>
+        <p class="font">快速登录
+            <span class="iconfont icon-qq fontactive" style="margin-left: 3px"></span>
+            <span class="iconfont icon-weibo" style="margin-left: 12px"></span>
+            <span class="iconfont icon-wei_xin" style="margin-left: 12px"></span>
+            <span class="iconfont icon-GitHub" style="margin-left: 12px"></span>
+            <span class="iconfont icon-renren" style="margin-left: 12px"></span>
+        </p>
+    </div>
+</div>
+<!--遮布处理结束-->
+
+<nav class="navbar navbar-default" style="background: #191E29;border: none;border-radius: 0px;margin-bottom: 0">
+    <div class="container" style="padding-right: 0!important;">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="img/logo_03.png" alt="" style="width: 116px;height: 50px">
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="padding-right: 0!important;">
+            <ul class="nav navbar-nav" id="nav-ul">
+
+                <li class="dropdown" id="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">课程<span class="caret"></span></a>
+                    <ul class="dropdown-menu" style="background: #191E29">
+                        <li><a href="#" class="drop-nav-a">全部课程</a></li>
+                        <li><a href="#" class="drop-nav-a">即将上线</a></li>
+                        <li><a href="#" class="drop-nav-a">开发者</a></li>
+
+                    </ul>
+                </li>
+
+                <li><a href="#" class="nav-a-link">路径</a></li>
+                <li><a href="discuss.html" class="nav-a-link">讨论区</a></li>
+                <li><a href="#" class="nav-a-link">训练营</a></li>
+                <li><a href="#" class="nav-a-link">会员</a></li>
+
+            </ul>
+
+            <div class="annius">
+                <button class="btn btn-default" id="submit01" style="background: #191E29;color: #8C8E94;border-color: #8C8F94">登录</button>
+                <button  class="btn btn-default" id="submit02" style="background: #11AA8C;color: white;border-color: #11AA8C">注册</button>
+            </div>
+            <div class="form-group group-input" style="box-shadow: 0px 0px 5px #11AA8C;width: 179px!important;margin-right: 10px">
+                <input type="text" class="form-control" placeholder="搜索/课程/问答" style="width: 179px!important">
+            </div>
+
+            <!--<ul class="nav navbar-nav navbar-right" style="border: 1px solid white">
+                <div class="navbar-form navbar-left" style="padding-left: 0!important;padding-right: 0!important;">
+                </div>
+            </ul>-->
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div  class="register-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 register-left">
+                <img src="img/container-title-2.png" alt="" class="register-img"/>
+                <div class="register-left-btn">进入课程</div>
+            </div>
+            <div class="col-md-5 register-left">
+                 <div class="register-form">
+                     <div class="group-one">
+                         <input type="text" placeholder="昵称" onblur="Uname()" class="register-input"/>
+                         <div id="mention-username"></div>
+                     </div>
+                     <div class="group-one">
+                         <input type="text" placeholder="邮箱" onblur="Mail()" class="register-input"/>
+                         <div id="mention-mail"></div>
+                     </div>
+                     <div class="group-one">
+                         <input type="text" placeholder="密码" onblur="PassWord()" class="register-input"/>
+                         <div id="mention-password"></div>
+                     </div>
+                     <div class="group-one-active">
+                         加入实验楼
+                     </div>
+                     <div class="bottom-font">点击"加入实验楼"，表示您已经同意我们的 <a style="color: #DDDDDD">隐私条款</a></div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="introduce">
+    <div class="container" style="height: 100%;">
+        <div class="row">
+            <div class="col-sm-6 col-md-3 introduce-unit">
+                <img src="img/introduceContainer1.gif" alt=""/>
+                <p class="introduce-font">丰富全面的计算机实验课程</p>
+            </div>
+            <div class="col-sm-6 col-md-3 introduce-unit">
+                <img src="img/introduceContainer2.gif" alt=""/>
+                <p class="introduce-font">在线编程环境，1秒启动</p>
+            </div>
+            <div class="col-sm-6 col-md-3 introduce-unit">
+                <img src="img/introduceContainer3.gif" alt=""/>
+                <p class="introduce-font">每天一个项目课，丰富你的项目经验</p>
+            </div>
+            <div class="col-sm-6 col-md-3 introduce-unit">
+                <img src="img/introduceContainer4.gif" alt=""/>
+                <p class="introduce-font">有效学习时间，真实记录你的代码生涯</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container study">
+    学习路径
+    <div class="study-line01"></div>
+    <div class="study-line02"></div>
+</div>
+<div class="container study-list">
+    <div class="col-xs-12 col-sm-6 col-md-4 study-list-box">
+        <div class="inside-box">
+            <div class="box-img-left">
+                <img src="img/1471513730333.png" alt="" class="inside-box-img"/>
+            </div>
+            <!--<div class="box-right-font">
+                <p class="one">新手入门</p>
+                <p class="two">6门课程</p>
+            </div>-->
+            <!--<div class="cover-font">
+                <div class="cover-fonts">
+                    新手入门路径帮助对 IT 技术感兴趣的新手0基础入门计算机编程。
+                    本路径通过新手入门、Linux 及 Vim课程熟悉实验楼的实践学习环境，
+                    再以 C 语言和一个简单的项目引导你一步步进入计算机技术的殿堂。
+                </div>
+            </div>-->
+
+            <div class="box-right-font">
+                <p class="one">新手入门</p>
+                <p class="two">6门课程</p>
+                <div class="cover-font">
+                    <div class="cover-fonts">
+                        新手入门路径帮助对 IT 技术感兴趣的新手0基础入门计算机编程。
+                        本路径通过新手入门、Linux 及 Vim课程熟悉实验楼的实践学习环境，
+                        再以 C 语言和一个简单的项目引导你一步步进入计算机技术的殿堂。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 study-list-box">
+        <div class="inside-box">
+            <div class="box-img-left">
+                <img src="img/1471513769430.png" alt="" class="inside-box-img"/>
+            </div>
+            <div class="box-right-font">
+                <p class="one">Python研发工程师</p>
+                <p class="two">83门课程</p>
+                <div class="cover-font">
+                    <div class="cover-fonts">
+                        Python技术路径中包含入门知识、Python基础、Web框架、基础项目、网络编程、数据与计算及综合项目七个模块。
+                        模块中的课程将带着你逐步深入，学会如何使用 Python 实现项目一个博客，桌面词典，微信机器人或网络安全软件等。
+                        完成本路径的实验课，将具备独立开发 Python 软件和 Web 应用的能力。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 study-list-box">
+        <div class="inside-box">
+            <div class="box-img-left">
+                <img src="img/1471513793360.png" alt="" class="inside-box-img"/>
+            </div>
+            <div class="box-right-font">
+                <p class="one">C++ 研发工程师</p>
+                <p class="two">26门课程</p>
+                <div class="cover-font">
+                    <div class="cover-fonts">
+                        C++ 学习路径中将通过使用 C++ 语言实现 Web 服务器，Markdown 解析器，内存池以及 Docker 容器管理工具等，
+                        学习并实践 C++ 编程基础，C++ 11/14 标准，C++ 图像处理及增强现实技术。
+                        完成本路径的所有实验课，将能够使用 C++  独立实现复杂的应用程序。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 study-list-box">
+        <div class="inside-box">
+            <div class="box-img-left">
+                <img src="img/1471513926288.png" alt="" class="inside-box-img"/>
+            </div>
+            <div class="box-right-font">
+                <p class="one">C++ 研发工程师</p>
+                <p class="two">26门课程</p>
+                <div class="cover-font">
+                    <div class="cover-fonts">
+                        新手入门路径帮助对 IT 技术感兴趣的新手0基础入门计算机编程。
+                        本路径通过新手入门、Linux 及 Vim课程熟悉实验楼的实践学习环境，
+                        再以 C 语言和一个简单的项目引导你一步步进入计算机技术的殿堂。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 study-list-box">
+        <div class="inside-box">
+            <div class="box-img-left">
+                <img src="img/1471513867033.png" alt="" class="inside-box-img"/>
+            </div>
+            <div class="box-right-font">
+                <p class="one">C++ 研发工程师</p>
+                <p class="two">26门课程</p>
+                <div class="cover-font">
+                    <div class="cover-fonts">
+                        新手入门路径帮助对 IT 技术感兴趣的新手0基础入门计算机编程。
+                        本路径通过新手入门、Linux 及 Vim课程熟悉实验楼的实践学习环境，
+                        再以 C 语言和一个简单的项目引导你一步步进入计算机技术的殿堂。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 study-list-box">
+        <div class="inside-box">
+            <div class="box-img-left">
+                <img src="img/1471514004752.png" alt="" class="inside-box-img"/>
+            </div>
+            <div class="box-right-font">
+                <p class="one">C++ 研发工程师</p>
+                <p class="two">26门课程</p>
+                <div class="cover-font">
+                    <div class="cover-fonts">
+                        新手入门路径帮助对 IT 技术感兴趣的新手0基础入门计算机编程。
+                        本路径通过新手入门、Linux 及 Vim课程熟悉实验楼的实践学习环境，
+                        再以 C 语言和一个简单的项目引导你一步步进入计算机技术的殿堂。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 study-list-box">
+        <div class="inside-box">
+            <div class="box-img-left">
+                <img src="img/1471514111981.png" alt="" class="inside-box-img"/>
+            </div>
+            <div class="box-right-font">
+                <p class="one">C++ 研发工程师</p>
+                <p class="two">26门课程</p>
+                <div class="cover-font">
+                    <div class="cover-fonts">
+                        新手入门路径帮助对 IT 技术感兴趣的新手0基础入门计算机编程。
+                        本路径通过新手入门、Linux 及 Vim课程熟悉实验楼的实践学习环境，
+                        再以 C 语言和一个简单的项目引导你一步步进入计算机技术的殿堂。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 study-list-box">
+        <div class="inside-box">
+            <div class="box-img-left">
+                <img src="img/1471514095761.png" alt="" class="inside-box-img"/>
+            </div>
+            <div class="box-right-font">
+                <p class="one">C++ 研发工程师</p>
+                <p class="two">26门课程</p>
+                <div class="cover-font">
+                    <div class="cover-fonts">
+                        新手入门路径帮助对 IT 技术感兴趣的新手0基础入门计算机编程。
+                        本路径通过新手入门、Linux 及 Vim课程熟悉实验楼的实践学习环境，
+                        再以 C 语言和一个简单的项目引导你一步步进入计算机技术的殿堂。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 study-list-box">
+        <div class="inside-box">
+            <div class="box-img-left">
+                <img src="img/1471514153000.png" alt="" class="inside-box-img"/>
+            </div>
+            <div class="box-right-font">
+                <p class="one">C++ 研发工程师</p>
+                <p class="two">26门课程</p>
+                <div class="cover-font">
+                    <div class="cover-fonts">
+                        新手入门路径帮助对 IT 技术感兴趣的新手0基础入门计算机编程。
+                        本路径通过新手入门、Linux 及 Vim课程熟悉实验楼的实践学习环境，
+                        再以 C 语言和一个简单的项目引导你一步步进入计算机技术的殿堂。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 study-list-box">
+        <div class="inside-box">
+            <div class="box-img-left">
+                <img src="img/1471514037180.png" alt="" class="inside-box-img"/>
+            </div>
+            <div class="box-right-font">
+                <p class="one">C++ 研发工程师</p>
+                <p class="two">26门课程</p>
+                <div class="cover-font">
+                    <div class="cover-fonts">
+                        新手入门路径帮助对 IT 技术感兴趣的新手0基础入门计算机编程。
+                        本路径通过新手入门、Linux 及 Vim课程熟悉实验楼的实践学习环境，
+                        再以 C 语言和一个简单的项目引导你一步步进入计算机技术的殿堂。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 study-list-box">
+        <div class="inside-box">
+            <div class="box-img-left">
+                <img src="img/1471513817808.png" alt="" class="inside-box-img"/>
+            </div>
+            <div class="box-right-font">
+                <p class="one">C++ 研发工程师</p>
+                <p class="two">26门课程</p>
+                <div class="cover-font">
+                    <div class="cover-fonts">
+                        新手入门路径帮助对 IT 技术感兴趣的新手0基础入门计算机编程。
+                        本路径通过新手入门、Linux 及 Vim课程熟悉实验楼的实践学习环境，
+                        再以 C 语言和一个简单的项目引导你一步步进入计算机技术的殿堂。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 study-list-box">
+        <div class="inside-box">
+            <div class="box-img-left">
+                <img src="img/1471514058548.png" alt="" class="inside-box-img"/>
+            </div>
+            <div class="box-right-font">
+                <p class="one">C++ 研发工程师</p>
+                <p class="two">26门课程</p>
+                <div class="cover-font">
+                    <div class="cover-fonts">
+                        新手入门路径帮助对 IT 技术感兴趣的新手0基础入门计算机编程。
+                        本路径通过新手入门、Linux 及 Vim课程熟悉实验楼的实践学习环境，
+                        再以 C 语言和一个简单的项目引导你一步步进入计算机技术的殿堂。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container study-two">
+    实验课程
+    <div class="study-line01"></div>
+    <div class="study-line02"></div>
+</div>
+<div class="container exercise">
+    <div class="col-sm-6 col-md-3 exercise-box">
+        <div class="exercise-inside-box">
+            <img src="img/ncn1.jpg" alt="" style="width: 100%;height: 142px"/>
+            <p class="exercise-font-one">Linux基础入门（新版）</p>
+            <p class="exercise-font-two">85157</p>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-3 exercise-box">
+        <div class="exercise-inside-box">
+            <img src="img/ncn11.jpg" alt="" style="width: 100%;height: 142px"/>
+            <p class="exercise-font-one">Go语言编程</p>
+            <p class="exercise-font-two">5741</p>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-3 exercise-box">
+        <div class="exercise-inside-box">
+            <img src="img/ncn23.jpg" alt="" style="width: 100%;height: 142px"/>
+            <p class="exercise-font-one">PHP编程语言</p>
+            <p class="exercise-font-two">8093</p>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-3 exercise-box">
+        <div class="exercise-inside-box">
+            <img src="img/ncn30.jpg" alt="" style="width: 100%;height: 142px"/>
+            <p class="exercise-font-one">Python Django Web框架</p>
+            <p class="exercise-font-two">5691</p>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-top">
+        <div class="container" style="height: 100%">
+            <div class="row" style="height: 190px;box-sizing: border-box">
+                <div class="col-md-4 box01">
+                    <img src="img/logo_03.png" alt=""/>
+                    <p style="font-size: 20px;color: #00CC99;margin-left: 15px">动手做实验，轻松学编程</p>
+                    <div class="icon-one">
+                        <span class="iconfont icon-wei_xin"></span>
+                    </div>
+                    <div class="icon-one">
+                        <span class="iconfont icon-qq"></span>
+                    </div>
+                    <div class="icon-one">
+                        <span class="iconfont icon-weibo"></span>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-2 box02">
+                    <div style="font-size: 14px;margin-bottom: 10px">公司</div>
+                    <a href="#">关于我们</a><br>
+                    <a href="#">联系我们</a><br>
+                    <a href="#">加入我们</a><br>
+                    <a href="#">技术博客</a><br>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-2 box02">
+                    <div style="font-size: 14px;margin-bottom: 10px">合作</div>
+                    <a href="#">我要投稿</a><br>
+                    <a href="#">教师合作</a><br>
+                    <a href="#">高校合作</a><br>
+                    <a href="#">友情链接</a><br>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-2 box02">
+                    <div style="font-size: 14px;margin-bottom: 10px">服务</div>
+                    <a href="#">实战训练营</a><br>
+                    <a href="#">会员服务</a><br>
+                    <a href="#">实验报告</a><br>
+                    <a href="#">常见问题</a><br>
+                    <a href="#">隐私条款</a><br>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-2 box02">
+                    <div style="font-size: 14px;margin-bottom: 10px">学习路径</div>
+                    <a href="#">Python学习路径</a><br>
+                    <a href="#">linux学习路径</a><br>
+                    <a href="#">大数据学习路径</a><br>
+                    <a href="#">Java学习路径</a><br>
+                    <a href="#">PHP学习路径</a><br>
+                    <a href="#">全部</a><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer-bottom-active">
+        <div class="container"> Copyright @2013-2016 实验楼在线教育 | 蜀ICP备13019762号</div>
+</div>
+</body>
+<script>
+    //ajax
+    /*$('#nav li').click(function(){
+        alert('请先登录')
+    })*/
+
+    $.ajax({
+        url:'static/index.json',
+        dataType:'json',
+        data:'get',
+        success:function (data) {
+            var user=data.user[0]  // 111
+
+            $('.box-four').eq(0).click(function () {
+                var content= $('#yx').val()  // 获取邮箱输入框的值
+                var num=data.user.indexOf(content)  //获取user数组里面的用户名的下标，若没有则为-1
+                if(num != -1 && $('#mm').val() == data.pword[num]){
+                   // console.log('登录成功')
+                    alert('恭喜你，登录成功！')
+                    window.location.reload()
+                    sessionStorage.setItem('email',$('#yx').val())
+                }else{
+                   //console.log('错误')
+                    alert('邮箱或密码错误，请重新登录！')
+                    $('#yx').val('')
+                    $('#mm').val('')
+
+                }
+
+            })
+
+
+
+        }
+
+    })
+
+
+
+    //
+    $('.cover-font').mouseover(function(){
+        $(this).css('opacity','1')
+    })
+    $('.cover-font').mouseout(function(){
+        $(this).css('opacity','0')
+    })
+
+    //
+    var MentionUName=document.getElementById('mention-username') //获取用户名提示的dom
+    var MentionMail=document.getElementById('mention-mail')
+    var MentionPassWord=document.getElementById('mention-password')
+    var RegInput=document.getElementsByClassName('register-input') //获取输入框的dom
+    var InputBox=document.getElementsByClassName('group-one')
+    var UserRegExp=/^[a-zA-Z0-9_\u4e00-\u9fa5]+$/
+    var MailRegExp=/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
+    function Uname(){
+        var UnameGo=UserRegExp.test(RegInput[0].value);
+        if(RegInput[0].value.length>2 && UnameGo==true){
+            MentionUName.innerHTML=''
+        }else{
+            MentionUName.innerHTML='用户名长度必须大于2并且只能包括中文、字母、数字及下划线!';
+            MentionUName.style.color='#D9534E';
+            MentionUName.style.fontSize='12px';
+            InputBox[0].style.marginBottom='45px';
+            MentionUName.style.marginTop='7px'
+        }
+    }
+
+    function Mail(){
+        var MailGo=MailRegExp.test(RegInput[1].value);
+        if(MailGo==true){
+            MentionMail.innerHTML=''
+        }else{
+            MentionMail.innerHTML='请填写正确格式的邮箱!';
+            MentionMail.style.color='#D9534E';
+            MentionMail.style.fontSize='12px';
+            InputBox[1].style.marginBottom='45px';
+            MentionMail.style.marginTop='7px'
+        }
+    }
+    function PassWord(){
+        if(RegInput[2].value.length>5 && RegInput[2].value.length<17){
+            MentionPassWord.innerHTML=''
+        }else{
+            MentionPassWord.innerHTML='密码长度必须为6-16位!';
+            MentionPassWord.style.color='#D9534E';
+            MentionPassWord.style.fontSize='12px';
+            InputBox[2].style.marginBottom='45px';
+            MentionPassWord.style.marginTop='7px'
+        }
+    }
+
+
+</script>
+</html>

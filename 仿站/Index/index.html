@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/all.css"/>
+</head>
+<body onload="start()">
+<!--导航栏开始-->
+<div class="nav">
+    <div class="nav-left">
+        <img src="img/logo.png" alt="" style="margin-top: 16px"/>
+    </div>
+    <div class="nav-right">
+        <div style="float: right">
+            <div class="nav-right-box">
+                <div class="item">网站首页</div>
+            </div>
+            <div class="nav-right-box">
+                <div class="item"><a href="about.html" style="text-decoration: none;color: #676768">关于我们</a></div>
+            </div>
+            <div class="nav-right-box">
+                <div class="item"><a href="corporate.html" style="text-decoration: none;color: #676768">企业文化</a></div>
+            </div>
+            <div class="nav-right-box">
+                <div class="item"><a href="news.html" style="text-decoration: none;color: #676768">新闻中心</a></div>
+            </div>
+            <div class="nav-right-box">
+                <div class="item"><a href="product.html" style="text-decoration: none;color: #676768">产品中心</a></div>
+            </div>
+            <div class="nav-right-box">
+                <div class="item"><a href="online.html" style="text-decoration: none;color: #676768">在线留言</a></div>
+            </div>
+            <div class="nav-right-box">
+                <div class="item"><a href="contact.html" style="text-decoration: none;color: #676768">联系我们</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航栏结束-->
+
+<!--轮播图开始-->
+<div class="chart">
+    <img src="img/gg01.jpg" alt="" id="loopimg"/>
+    <div class="chart-box">
+        <div class="chart-box-one"><div class="box-img active"><img src="img/gg01.jpg" alt=""/></div></div>
+        <div class="chart-box-one"><div class="box-img"><img src="img/gg02.jpg" alt=""/></div></div>
+        <div class="chart-box-one"><div class="box-img"><img src="img/gg03.jpg" alt=""/></div></div>
+        <div class="chart-box-one"><div class="box-img"><img src="img/gg04.jpg" alt=""/></div></div>
+    </div>
+    <div class="button">
+        <div class="button-left" onclick="one()"> < </div>
+        <div class="button-right" onclick="two()"> > </div>
+    </div>
+</div>
+<!--轮播图结束-->
+
+<!--主体部分开始-->
+<div class="container">
+    <div class="container-left">
+        <div class="top-box">
+            <span></span>新闻资讯
+        </div>
+        <div class="left-box">
+            <div class="font-left">
+                <div class="img-left">
+                    <img src="img/123456.jpg" alt="" style="width: 100%;height: 100%"/>
+                </div>
+                <div class="font">
+                    <div class="font-bg">公司新闻</div>
+                    <div class="news">公司移动项目顺利通过验收</div>
+                </div>
+                <div class="font">
+                    <div class="font-bg">公司新闻</div>
+                    <div class="news">曼联欲进军中国网游市场</div>
+                </div>
+                <div class="font">
+                    <div class="font-bg">公司新闻</div>
+                    <div class="news">挑战自我极限 强化团队协作</div>
+                </div>
+                <div class="font">
+                    <div class="font-bg">行业动态</div>
+                    <div class="news">西方国家为什么不允许“人肉搜索”</div>
+                </div>
+                <div class="font">
+                    <div class="font-bg">公司新闻</div>
+                    <div class="news">互联助力阿里巴巴产业带</div>
+                </div>
+            </div>
+            <div class="font-right">
+                <div class="img-left">
+                    <img src="img/654321.jpg" alt="" style="width: 100%;height: 100%"/>
+                </div>
+                <div class="font">
+                    <div class="font-bg">行业动态</div>
+                    <div class="news">谷歌将自主开发服务器处理器</div>
+                </div>
+                <div class="font">
+                    <div class="font-bg">公司新闻</div>
+                    <div class="news">谷歌拟将台湾数据中心扩大一倍</div>
+                </div>
+                <div class="font">
+                    <div class="font-bg">行业动态</div>
+                    <div class="news">上海自贸区跨境通试运行 建国内唯...</div>
+                </div>
+                <div class="font">
+                    <div class="font-bg">行业动态</div>
+                    <div class="news">百度推荐全面开发 助推网站流量增长</div>
+                </div>
+                <div class="font">
+                    <div class="font-bg">公司新闻</div>
+                    <div class="news">灯光上网直接秒杀wifi 通讯业迎来新...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-right">
+        <div class="top-box">
+            <span></span>产品中心
+        </div>
+        <div class="right-box">
+            <div class="right-top-box">
+                <div class="right-img01">
+                    <img src="img/123456.jpg" alt="" style="width: 100%;height: 100%"/>
+                </div>
+                <div class="right-font01">
+                    <div style="font-size: 18px;color: #008CDE;font-weight: 600">域名空间服务</div>
+                    <p style="font-size: 14px;letter-spacing: 0.5px;margin-top: 6px;color: #666666">域名(Domian Name)，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在
+                        数据传输时标识计算机的电子方位(有时也指地理位置，地理上的域名，指代有行政自主权的一个地方区域)
+                        。域名是一个IP地址上有“面具”。一个域名的目的是便于记忆和沟通的一组服务器的地址(网站，电子邮件，FTP等)。
+                    </p>
+                    <div class="small-box">详细信息</div>
+                </div>
+            </div>
+            <div class="right-bottom-box">
+                <div class="right-img01">
+                    <img src="img/654321.jpg" alt="" style="width: 100%;height: 100%"/>
+                </div>
+                <div class="right-font01">
+                    <div style="font-size: 18px;color: #008CDE;font-weight: 600">B2B电子商务平台</div>
+                    <p style="font-size: 14px;letter-spacing: 0.5px;margin-top: 6px;color: #666666">
+                        B2B（Business To Business），是指一个互联网市场领域的一种，是企业对企业之间的营销关系。
+                        它将企业内部网，通过B2B网站与客户紧密结合起来，通过网络的快速反应，为客户提供更好的服务，从而促进企业的业务发展(Business Development)。
+                        近年来B2B发展(B2B Development，Directindustry B2B)势头迅猛，趋于成熟。势头迅
+                    </p>
+                    <div class="small-box">详细信息</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--主体部分结束-->
+
+<!--底部开始-->
+<div class="footer">
+    <div class="footer-box">
+        <div class="footer-left-box">
+            <p style="font-size: 16px;margin-top: 25px;color: #CCCCCC;margin-bottom: 15px;font-weight: bold">联系我们</p>
+            <div class="footer-small-box">
+                <div class="box"></div>
+                <span style="cursor:pointer">河北省石家庄正定县某某地</span>
+            </div>
+            <div class="footer-small-box">
+                <div class="box"></div>
+                <span style="cursor:pointer">13931140805 15075171310</span>
+            </div>
+            <div class="footer-small-box">
+                <div class="box"></div>
+                <span style="cursor:pointer">2212322343@qq.com</span>
+            </div>
+            <div style="color: #CCCCCC;margin-top: 25px;margin-bottom: 4px;font-size: 15px">
+                ASPCMS模板仿站教程网 版权所有 2014-2016 冀ICP备8888888
+            </div>
+            <div style="color: #CCCCCC;margin-bottom: 4px;font-size: 15px">
+                手机：13931140805 15075171310 QQ:2212322343 2050001400
+            </div>
+            <div style="color: #CCCCCC;font-size: 15px">
+                Email:2212322343@qq.com 2050001400@qq.com
+            </div>
+        </div>
+        <div class="footer-right-box">
+            <p style="font-size: 16px;margin-top: 32px;color: #CCCCCC;margin-bottom: 10px;font-weight: bold">友情链接</p>
+            <div class="footer-imgs">
+                <div class="footer-img"><img src="img/links.jpg" alt="" class="img-active"/></div>
+                <div class="footer-img"><img src="img/links.jpg" alt="" class="img-active"/></div>
+                <div class="footer-img"><img src="img/links.jpg" alt="" class="img-active"/></div>
+                <div class="footer-img"><img src="img/links.jpg" alt="" class="img-active"/></div>
+                <div class="footer-img"><img src="img/links.jpg" alt="" class="img-active"/></div>
+            </div>
+            <div class="font-baidus">
+                <div class="font-baidu">百度搜索</div>
+                <div class="font-baidu">百度搜索</div>
+                <div class="font-baidu">百度搜索</div>
+                <div class="font-baidu">百度搜索</div>
+                <div class="font-baidu">百度搜索</div>
+                <div class="font-baidu">百度搜索</div>
+                <div class="font-baidu">百度搜索</div>
+                <div class="font-baidu">百度搜索</div>
+                <div class="font-baidu">百度搜索</div>
+                <div class="font-baidu">百度搜索</div>
+                <div class="font-baidu">百度搜索</div>
+                <div class="font-baidu">百度搜索</div>
+                <div class="font-baidu">百度搜索</div>
+            </div>
+            <div class="footer-nav">
+                <div class="footer-nav-box">关于我们</div>
+                <div class="footer-nav-box">企业文化</div>
+                <div class="footer-nav-box">新闻中心</div>
+                <div class="footer-nav-box">产品中心</div>
+                <div class="footer-nav-box">在线留言</div>
+                <div class="footer-nav-box">联系我们</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--底部结束-->
+</body>
+<script>
+    var chart=document.getElementsByClassName('chart');  //整个轮播图
+    var button=document.getElementsByClassName('button'); //左右两边的按钮
+    var myimg=document.getElementById('loopimg');  //放的第一张图片
+    var myboximgs=document.getElementsByClassName('box-img');  //下面盒子里面的小图片集合
+    var a=0;
+    //鼠标覆盖停止自动切换
+    chart[0].onmouseover=function(){
+        stop();
+        button[0].style.display='block';
+    }
+    //鼠标移出自动切换
+    chart[0].onmouseout=function(){
+        start()
+        button[0].style.display='none';
+    }
+
+    //start()开始方法
+    var t;
+    function start(){
+        t= setInterval(function(){
+            // var myimg=document.getElementById('loopimg');  //放的第一张图片
+            if(myimg.src.match('gg01.jpg')){
+                myimg.src='img/gg02.jpg';
+                a=2;
+                border();
+            }else if(myimg.src.match('gg02.jpg')){
+                myimg.src='img/gg03.jpg';
+                a=3;
+                border();
+            }else if(myimg.src.match('gg03.jpg')){
+                myimg.src='img/gg04.jpg';
+                a=4;
+                border();
+            } else{
+                myimg.src='img/gg01.jpg';
+                a=1;
+                border();
+            }
+        },3000)
+    }
+    //结束方法
+    function stop(){
+        clearInterval(t)
+    }
+
+    //左边按钮图片往后轮播
+    function one(){
+        // var myimg=document.getElementById('loopimg');
+        if(myimg.src.match('gg01.jpg')){
+            myimg.src='img/gg04.jpg';
+            a=4;
+            border();
+        }else if(myimg.src.match('gg04.jpg')){
+            myimg.src='img/gg03.jpg';
+            a=3;
+            border();
+        }else if(myimg.src.match('gg03.jpg')){
+            myimg.src='img/gg02.jpg';
+            a=2;
+            border();
+        } else{
+            myimg.src='img/gg01.jpg';
+            a=1;
+            border();
+        }
+    }
+    //右边按钮图片往前轮播
+    function two(){
+        // var myimg=document.getElementById('loopimg');
+        if(myimg.src.match('gg01.jpg')){
+            myimg.src='img/gg02.jpg';
+            a=2;
+            border();
+        }else if(myimg.src.match('gg02.jpg')){
+            myimg.src='img/gg03.jpg';
+            a=3;
+            border();
+        }else if(myimg.src.match('gg03.jpg')){
+            myimg.src='img/gg04.jpg';
+            a=4;
+            border();
+        } else{
+            myimg.src='img/gg01.jpg';
+            a=1;
+            border();
+        }
+    }
+
+    //点击下面盒子里的图片背景就会进行切换
+    myboximgs[0].onclick=function(){
+        myimg.src='img/gg01.jpg';
+        a=1;
+        border();
+    };
+    myboximgs[1].onclick=function(){
+        myimg.src='img/gg02.jpg';
+        a=2;
+        border();
+    };
+    myboximgs[2].onclick=function(){
+        myimg.src='img/gg03.jpg';
+        a=3;
+        border();
+    };
+    myboximgs[3].onclick=function(){
+        myimg.src='img/gg04.jpg';
+        a=4;
+        border();
+    }
+
+    function border(){
+        if(a==1){
+            myboximgs[0].style.borderTop='5px solid white';
+            myboximgs[0].style.borderRight='2px solid white';
+            myboximgs[0].style.borderButtom='3px solid white';
+            myboximgs[0].style.borderLeft='3px solid white';
+            myboximgs[1].style.border='1px solid white';
+            myboximgs[2].style.border='1px solid white';
+            myboximgs[3].style.border='1px solid white';
+        }else if(a==2){
+            myboximgs[1].style.borderTop='5px solid white';
+            myboximgs[1].style.borderRight='2px solid white';
+            myboximgs[1].style.borderButtom='3px solid white';
+            myboximgs[1].style.borderLeft='3px solid white';
+            myboximgs[0].style.border='1px solid white';
+            myboximgs[2].style.border='1px solid white';
+            myboximgs[3].style.border='1px solid white';
+        }else if(a==3){
+            myboximgs[2].style.borderTop='5px solid white';
+            myboximgs[2].style.borderRight='2px solid white';
+            myboximgs[2].style.borderButtom='3px solid white';
+            myboximgs[2].style.borderLeft='3px solid white';
+            myboximgs[1].style.border='1px solid white';
+            myboximgs[0].style.border='1px solid white';
+            myboximgs[3].style.border='1px solid white';
+        }else{
+            myboximgs[3].style.borderTop='5px solid white';
+            myboximgs[3].style.borderRight='2px solid white';
+            myboximgs[3].style.borderButtom='3px solid white';
+            myboximgs[3].style.borderLeft='3px solid white';
+            myboximgs[0].style.border='1px solid white';
+            myboximgs[1].style.border='1px solid white';
+            myboximgs[2].style.border='1px solid white';
+        }
+    }
+</script>
+</html>

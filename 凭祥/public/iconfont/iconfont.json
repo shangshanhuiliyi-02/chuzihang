@@ -1,0 +1,16 @@
+{
+  "id": "1490613",
+  "name": "大三-web实训",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "10241252",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e755",
+      "unicode_decimal": 59221
+    }
+  ]
+}

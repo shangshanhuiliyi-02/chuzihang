@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/Jquery.js"></script>
+    <script src="../js/vue.js"></script>
+    <style>
+        .success{
+            width: 100px;height: 40px;text-align: center;line-height: 40px;
+            background: black;color: white;position: absolute;top: 50%;left: 50%;
+            margin: -20px 0 0 -50px;opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h2>通知公告新闻</h2>
+    <input type="text" placeholder="请输入标题" v-model="title"><br>
+    <textarea placeholder="请输入内容" v-model="detail"></textarea><br>
+    <button @click="btn">提交</button>
+    <div class="success">插入成功</div>
+    <div class="data">
+        <div v-for="item in news">{{item.title}}
+            <button>删除</button>
+            <button>修改</button>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    var vm=new Vue({
+        el:'#app',
+        data:{
+            title:'',  //相当于输入框的value值
+            detail:'',
+            news:[1,2,3]  //假数据
+        },
+        mounted(){   //vue加载完成后，立即加载其中的函数或js语句
+            this.getList()
+        },
+        methods:{
+            btn(){
+                //console.log(vm.title)
+                $.ajax({     //点击提交按钮之后后台数据库就会插入数据 => 后台插入路由
+                    type:'post',
+                    url:'/api/notice/insert',
+                    data:{
+                        title:vm.title,
+                        detail:vm.detail
+                    },
+                    success:function (result) {
+                        vm.getList()
+                        console.log(result)
+                    }
+                })
+            },
+            getList(){
+                $.ajax({   //把后台数据库里面的news表中的新闻渲染到页面上 => 后台查询路由
+                    type:'get',
+                    url:'/api/notice/getList',
+                    success:function (result) {
+                        console.log(result)
+                        vm.news=result
+                    }
+                })
+            }
+        }
+    })
+</script>
+</html>

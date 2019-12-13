@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/contacts.css"/>
+    <link rel="stylesheet" href="iconfont/iconfont.css"/>
+    <style></style>
+</head>
+<body>
+<div class="header">   <!--头部开始-->
+    <div class="header-nav-box">
+        <div class="header-nav-left">
+            <img src="img/logo.png" alt=""/>
+        </div>
+        <div class="header-nav-right">
+            <div class="header-nav-font"><a href="index.html" style="text-decoration: none;color: white">HOME</a></div>
+            <div class="header-nav-font"><a href="about.html" style="text-decoration: none;color: white">ABOUT</a></div>
+            <div class="header-nav-font active1"><a href="portfolio.html" style="text-decoration: none;color: white">PORTFOLIO</a></div>
+            <div class="header-nav-font active2"><a href="clients.html" style="text-decoration: none;color: white">CLIENTS</a></div>
+            <div class="header-nav-font active">CONTACTS</div>
+        </div>
+    </div>
+</div>    <!--头部结束-->
+
+<div class="title">
+    <div class="line01"></div>
+    <div class="line02"></div>
+    <div class="line03"></div>
+    <div class="line04"></div>
+    CLIENTS LIST
+</div>
+<div class="container">
+<div class="container-left">
+    <div class="container-left-bg"></div>
+    <div class="left-font01">
+        Our free themes go without support services.Support services and special offers come
+        with premium <span style="color: #FD9220">website templates.</span>
+    </div>
+    <div class="left-font01">
+        If you need help in customization of this theme,hire guys from
+       <span style="color: #FD9220">Template Tuning</span>to do it for you
+    </div>
+    <div class="left-font01">
+        Leave us comments with any ideas about free website templates.
+
+    </div>
+
+</div>
+<div class="container-right">
+    <div style="position: relative"><input type="text" class="right-input01" placeholder="Name:" id="input01" onblur="one()" onkeyup="a()"/>
+        <span class="span01">*This field is required.</span></div>
+    <div style="position: relative"><input type="text" class="right-input01" placeholder="Telephone:" id="input02" onblur="two()" onkeyup="b()"/>
+        <span class="span01">*This field is required.</span></div>
+    <div style="position: relative"><input type="text" class="right-input01" placeholder="E-mail:" id="input03" onblur="three()" onkeyup="c()"/>
+        <span class="span01">*This field is required.</span></div>
+    <div style="position: relative"><textarea name=""  cols="30" rows="10" class="fonts" placeholder="Message:" id="text" onblur="four()" onkeyup="d()"></textarea>
+        <span class="span02">*This field is required.</span></div>
+    <div class="send">
+        <div class="send01">SEND</div>
+        <div class="send01">CLEAR</div>
+    </div>
+    <p style="font-size: 14px;color: #A1A1A1;margin-top: 30px">Marketing Department</p>
+    <p style="font-size: 14px;color: #A1A1A1">E-mail:<span style="color: #FD9F20">marketing@templatemonster.com</span></p>
+    <p style="font-size: 14px;color: #A1A1A1">Phone:1-518-312-4162</p>
+
+</div>
+</div>
+
+<div class="footer">
+    <div class="footer-box">
+        <div class="footer-box-left">
+            @Copyright @2013.Company name All rights reserved <span class="footer-font">网页模板</span>
+        </div>
+        <div class="footer-box-right">
+            <div class="foot-right">
+                <div class="one">
+                    <span class="iconfont icon-twitter3"></span>
+                </div>
+                <div class="one">
+                    <span class="iconfont icon-facebookfacebook52"></span>
+                </div>
+                <div class="one">
+                    <span class="iconfont icon-google0"></span>
+                </div>
+                <div class="one">
+                    <span class="iconfont icon-yduitengxunweibo"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+    var input01=document.getElementById('input01');
+    var input02=document.getElementById('input02');
+    var input03=document.getElementById('input03');
+    var text=document.getElementById('text');
+    var span=document.getElementsByClassName('span01');
+    var spanactive=document.getElementsByClassName('span02');
+
+    function one(){
+        if(input01.value==''){
+            span[0].style.display='block';
+        }
+    }
+    function a(){
+        if(input01.value != ''){
+            span[0].style.display='none';
+        }
+    }
+
+    function two(){
+        if(input02.value==''){
+            span[1].style.display='block';
+        }
+    }
+    function b(){
+        if(input02.value != ''){
+            span[1].style.display='none';
+        }
+    }
+
+    function three(){
+        if(input03.innerHTML==''){}
+        span[2].style.display='block';
+    }
+    function c(){
+        if(input03.value != ''){
+            span[2].style.display='none';
+        }
+    }
+
+    function four(){
+        if(text.value==''){
+            spanactive[0].style.display='block';
+        }
+    }
+    function d(){
+        if(text.value != ''){
+            spanactive[0].style.display='none';
+        }
+    }
+
+
+
+</script>
+</html>

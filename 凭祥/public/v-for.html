@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <link rel="stylesheet" href="css/element.css">
+    <script src="js/element.js"></script>
+    <script src="js/main.js"></script>
+    <style>
+        .list-item{
+            border-bottom: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!--在循环的box上 遍历数组 es6语法 数据是list   item是遍历数组list中的每一项的值-->
+        <div class="list-item" v-for="item in list">
+            <div>{{item.title}}</div>
+            <div>{{item.time}}</div>
+            <div>{{item.detail}}</div>
+        </div>
+        <!--<div class="list-item">
+            <div>标题2</div>
+            <div>时间2</div>
+            <div>详情2</div>
+        </div>-->
+        <div>
+            <el-pagination
+                    :page-size="20"
+                    :pager-count="11"
+                    layout="prev, pager, next"
+                    :total="1000">
+            </el-pagination>
+        </div>
+    </div>
+</body>
+<script>
+    var vm=new Vue({
+        el:'#app',
+        data:{
+            list:[
+                {
+                    title:'标题1',
+                    time:'时间1',
+                    detail:'详情1'
+                },
+                {
+                    title:'标题2',
+                    time:'时间2',
+                    detail:'详情2'
+                },
+                {
+                    title:'标题3',
+                    time:'时间3',
+                    detail:'详情3'
+                }
+            ]
+        }
+    })
+</script>
+</html>

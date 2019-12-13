@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/jQuery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="css/discuss.css"/>     <!--项目自定义的css样式-->
+
+    <title></title>
+</head>
+<body>
+<!--遮布处理开始-->
+<div class="body-hide"></div>    <!--背景的那层灰布-->
+<div class="login-register-box">
+    <i class="iconfont icon---chahaohejiantou-" style="float: right;position: absolute;top:
+    10px;right: 20px;cursor: pointer" id="chaHao"></i>   <!--右上角的叉号-->
+    <div class="login-register-btn-box">
+        <div class="bottom-line"></div>
+        <div class="login-btn">登录</div>
+        <div class="register-btn">注册</div>
+    </div>
+    <div class="login-page">
+        <div class="input-box-01">
+            <div class="input-box-01-left">1</div>
+            <div class="input-box-01-right"><input type="text" placeholder="请输入邮箱"/></div>
+        </div>
+        <div class="input-box-01 input-box-01-active">
+            <div class="input-box-01-left">2</div>
+            <div class="input-box-01-right"><input type="password" placeholder="请输入密码"/></div>
+        </div>
+        <div class="box-three">
+            <input type="checkbox"/><div class="span01">下次自动登录</div><div class="span02">忘记密码？</div>
+        </div>
+        <div class="box-four">进入实验楼</div>
+        <p class="font">快速登录
+            <span class="iconfont icon-qq fontactive" style="margin-left: 3px"></span>
+            <span class="iconfont icon-weibo" style="margin-left: 12px"></span>
+            <span class="iconfont icon-wei_xin" style="margin-left: 12px"></span>
+            <span class="iconfont icon-GitHub" style="margin-left: 12px"></span>
+            <span class="iconfont icon-renren" style="margin-left: 12px"></span>
+        </p>
+    </div>
+    <div class="register-page">
+        <div class="input-box-01">
+            <div class="input-box-01-left">1</div>
+            <div class="input-box-01-right"><input type="text" placeholder="请输入邮箱"/></div>
+        </div>
+        <div class="input-box-01 input-box-01-active">
+            <div class="input-box-01-left">2</div>
+            <div class="input-box-01-right"><input type="password" placeholder="请输入密码"/></div>
+        </div>
+        <div class="box-three-active">
+            <div class="box-three-active-left"><input type="text"/></div>
+            <div class="box-three-active-right"></div>
+        </div>
+        <div class="box-four">注册</div>
+        <p class="box-five">注册表示您已经同意我们的<span style="color: #337AB7">隐私条款</span></p>
+        <p class="font">快速登录
+            <span class="iconfont icon-qq fontactive" style="margin-left: 3px"></span>
+            <span class="iconfont icon-weibo" style="margin-left: 12px"></span>
+            <span class="iconfont icon-wei_xin" style="margin-left: 12px"></span>
+            <span class="iconfont icon-GitHub" style="margin-left: 12px"></span>
+            <span class="iconfont icon-renren" style="margin-left: 12px"></span>
+        </p>
+    </div>
+</div>
+<!--遮布处理结束-->
+<nav class="navbar navbar-default" style="background: #191E29;border: none;border-radius: 0px;margin-bottom: 0">
+    <div class="container" style="padding-right: 0!important;">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="img/logo_03.png" alt="" style="width: 116px;height: 50px">
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="padding-right: 0!important;">
+            <ul class="nav navbar-nav">
+
+                <li class="dropdown" id="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">课程<span class="caret"></span></a>
+                    <ul class="dropdown-menu" style="background: #191E29">
+                        <li><a href="#" class="drop-nav-a">全部课程</a></li>
+                        <li><a href="#" class="drop-nav-a">即将上线</a></li>
+                        <li><a href="#" class="drop-nav-a">开发者</a></li>
+
+                    </ul>
+                </li>
+
+                <li><a href="#" class="nav-a-link">路径</a></li>
+                <li><a href="#" class="nav-a-link">讨论区</a></li>
+                <li><a href="#" class="nav-a-link">训练营</a></li>
+                <li><a href="#" class="nav-a-link">会员</a></li>
+
+            </ul>
+
+            <div class="annius">
+                <button class="btn btn-default" id="submit01" style="background: #191E29;color: #8C8E94;border-color: #8C8F94">登录</button>
+                <button  class="btn btn-default" id="submit02" style="background: #11AA8C;color: white;border-color: #11AA8C">注册</button>
+            </div>
+            <div class="form-group group-input" style="box-shadow: 0px 0px 5px #11AA8C;width: 179px!important;margin-right: 10px">
+                <input type="text" class="form-control" placeholder="搜索/课程/问答" style="width: 179px!important">
+            </div>
+
+            <!--<ul class="nav navbar-nav navbar-right" style="border: 1px solid white">
+                <div class="navbar-form navbar-left" style="padding-left: 0!important;padding-right: 0!important;">
+                </div>
+            </ul>-->
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+    <div class="col-md-9" style="border: 1px solid #EEEEEE;margin-top: 20px">
+        <div class="content">
+            <div class="discuss-nav">
+                <div class="discuss-nav-item active">全部</div>
+                <div class="discuss-nav-item">课程问答</div>
+                <div class="discuss-nav-item">交流讨论</div>
+                <div class="discuss-nav-item">技术分享</div>
+                <div class="discuss-nav-item">实验报告</div>
+                <div class="discuss-nav-item">站内公共</div>
+                <div class="discuss-nav-item"><span style="color: #00CC99">最新</span>/最热/未回复</div>
+            </div>
+
+            <div id="post">
+
+            </div>
+            <!--<div class="discuss-post">
+
+            </div>-->
+        </div>
+    </div>
+    <div class="col-md-3">
+
+    </div>
+    </div>
+
+
+<div class="footer">
+    <div class="footer-top">
+        <div class="container" style="height: 100%">
+            <div class="row" style="height: 190px;box-sizing: border-box">
+                <div class="col-md-4 box01">
+                    <img src="img/logo_03.png" alt=""/>
+                    <p style="font-size: 20px;color: #00CC99;margin-left: 15px">动手做实验，轻松学编程</p>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-2 box02">
+                    <div style="font-size: 14px;margin-bottom: 10px">公司</div>
+                    <a href="#">关于我们</a><br>
+                    <a href="#">联系我们</a><br>
+                    <a href="#">加入我们</a><br>
+                    <a href="#">技术博客</a><br>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-2 box02">
+                    <div style="font-size: 14px;margin-bottom: 10px">合作</div>
+                    <a href="#">我要投稿</a><br>
+                    <a href="#">教师合作</a><br>
+                    <a href="#">高校合作</a><br>
+                    <a href="#">友情链接</a><br>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-2 box02">
+                    <div style="font-size: 14px;margin-bottom: 10px">服务</div>
+                    <a href="#">实战训练营</a><br>
+                    <a href="#">会员服务</a><br>
+                    <a href="#">实验报告</a><br>
+                    <a href="#">常见问题</a><br>
+                    <a href="#">隐私条款</a><br>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-2 box02">
+                    <div style="font-size: 14px;margin-bottom: 10px">学习路径</div>
+                    <a href="#">Python学习路径</a><br>
+                    <a href="#">linux学习路径</a><br>
+                    <a href="#">大数据学习路径</a><br>
+                    <a href="#">Java学习路径</a><br>
+                    <a href="#">PHP学习路径</a><br>
+                    <a href="#">全部</a><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer-bottom-active">
+    <div class="container"> Copyright @2013-2016 实验楼在线教育 | 蜀ICP备13019762号</div>
+</div>
+
+</body>
+<script>
+    //
+    $(function(){
+        var email=sessionStorage.getItem('email')
+        console.log(email)
+        if(email == '' || email == null){
+            $(document).ready(function(){
+                alert('请先登录')
+                setTimeout(function(){
+                    window.location.href='index.html'
+                },500)
+            })
+        }else{
+            //alert('欢迎登录成功')
+        }
+    })
+
+
+    //
+    $('.discuss-nav-item').mouseover(function(){
+        $(this).addClass('active')
+    })
+    $('.discuss-nav-item').mouseout(function(){
+        $(this).removeClass('active')
+    })
+
+    $.ajax({
+        url:'static/discuss.json',  //json数据文件的地址，服务器地址
+        type:'get',
+        dataType:'json',  //将json数据进行解析
+        success:function(data){  //调用成功后返回data数据
+            console.log(data)
+            for(i=0;i<data.post.length;i++){
+                var title=data.post[i].title
+                var author=data.post[i].author
+                var lastAuthor=data.post[i].lastauthor
+                var time=data.post[i].time
+                var lastLevel=data.post[i].lastlevel
+                var roof=data.post[i].roof
+                if(roof==1){
+                    $('#post').append(`<div class="discuss-post"><div class="img-box">
+            <img src="img/gravataradmin.png" alt=""/>
+            </div>
+            <div class="post-box">
+            <div class="post-title title-active">
+            <span>置顶</span>
+            `+title+`
+            </div>
+            <div class="post-author"><span style="color: #337ABD;font-weight: unset">`+author+`</span>
+            <span>L14</span> `+time+`  小时前 最后回复 `+lastAuthor+` <span>L`+lastLevel+`</span>
+            </div>
+            </div>
+            <div class="reply-box">
+            <div class="reply">
+            <div>2409</div>
+            <div>查看</div>
+            </div>
+            <div class="reply">
+            <div>89</div>
+            <div>回复</div>
+            </div>
+            </div></div>`)
+                }else{
+                    $('#post').append(`<div class="discuss-post"><div class="img-box">
+            <img src="img/gravataradmin.png" alt=""/>
+            </div>
+            <div class="post-box">
+            <div class="post-title title-active">
+
+            `+title+`
+            </div>
+            <div class="post-author"><span style="color: #337ABD;font-weight: unset">`+author+`</span>
+            <span>L14</span> `+time+`  小时前 最后回复 `+lastAuthor+` <span>L`+lastLevel+`</span>
+            </div>
+            </div>
+            <div class="reply-box">
+            <div class="reply">
+            <div>2409</div>
+            <div>查看</div>
+            </div>
+            <div class="reply">
+            <div>89</div>
+            <div>回复</div>
+            </div>
+            </div></div>`)
+                }
+
+            }
+
+
+            $(function(){
+                $('.title-active').click(function(){
+                    var num = $('.title-active').index(this)
+                    console.log(num)
+                    location.href='discuss-news.html?id='+num
+                    //alert($(this).index())
+                })
+            })
+
+           /* $(function(){
+                $('.title-active').click(function(){
+                   // location.href='discuss-news.html?id='+$(this).index()
+                    alert($(this).index())
+                })
+            })*/
+
+        }
+    })
+
+
+
+
+
+
+
+    var dropdown=document.getElementById('dropdown');
+    dropdown.onmouseover=function(){
+        dropdown.classList.add('open');
+    }
+    dropdown.onmouseout=function(){
+        dropdown.classList.remove('open');
+    }
+
+
+    var bodyHide=document.getElementsByClassName('body-hide');  //灰布背景
+    var loginRegisterBox=document.getElementsByClassName('login-register-box');  //整个div
+    var LoginBtn=document.getElementsByClassName('login-btn');  //登录按钮
+    var RegisterBtn=document.getElementsByClassName('register-btn');  //注册按钮
+    var BottomLine=document.getElementsByClassName('bottom-line'); //按钮下划线
+    var LoginPage=document.getElementsByClassName('login-page'); //登录页面
+    var  RegisterPage=document.getElementsByClassName('register-page'); //注册页面
+    var chaHao=document.getElementById('chaHao'); //盒子右上角的叉号
+
+    var a=document.getElementById('submit01');   //导航栏上的登录按钮
+    var b=document.getElementById('submit02');  //导航栏上的注册按钮
+    a.onclick=function(){
+        bodyHide[0].style.display='block'; //灰布背景出现
+        loginRegisterBox[0].style.opacity='1';   //内容出现
+        LoginPage[0].style.display='block';  //登录页面出现
+        RegisterPage[0].style.display='none'; //注册页面不出现
+    };
+    b.onclick=function(){
+        bodyHide[0].style.display='block'; //灰布背景出现
+        loginRegisterBox[0].style.opacity='1'; //内容出现
+        LoginPage[0].style.display='none'; //登录页面不出现
+        RegisterPage[0].style.display='block'; //注册页面出现
+        loginRegisterBox[0].style.height='347px';
+        BottomLine[0].style.left='55px';
+    };
+
+    LoginBtn[0].onclick=function(){
+        BottomLine[0].style.left='0px';
+        LoginPage[0].style.display='block';
+        RegisterPage[0].style.display='none';
+        loginRegisterBox[0].style.height='302px';
+    }
+    RegisterBtn[0].onclick=function(){
+        BottomLine[0].style.left='55px';
+        LoginPage[0].style.display='none';
+        RegisterPage[0].style.display='block';
+        loginRegisterBox[0].style.height='347px';
+    }
+    chaHao.onclick=function(){
+        loginRegisterBox[0].style.opacity='0';
+        bodyHide[0].style.display='none';
+    }
+
+
+</script>
+</html>
